@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;  /* Permet de mieux gérer l'espace et éviter les débordements */
+    overflow: hidden;
+}
+
+/* Logo à gauche */
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap; /* Empêche le texte de se couper en plusieurs lignes */
+}
+
+/* Liens de navigation */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Donne à la barre de navigation toute la largeur */
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-style: italic;
+    margin-left: 1rem;
+    white-space: nowrap;  /* Empêche la coupure du texte */
+}
+
+header nav a:hover {
+    color: #1e90ff;
+}
+
+/* Pour l'écran mobile et tablettes */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.8rem 1rem;  /* Réduit l'espace pour s'adapter à des écrans plus petits */
+    }
+
+    header .logo {
+        font-size: 1.2rem;  /* Réduit la taille de la police pour mobile */
+    }
+
+    header nav a {
+        font-size: 0.9rem;  /* Réduit la taille de la police pour mobile */
+    }
+}
+
+/* Section Portfolio */
+.portfolio {
+    padding-top: 80px; /* Décalage pour la bannière */
+    background-color: #000;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.portfolio-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-container {
+    flex: 2;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.text-container h1 {
+    font-size: 2rem;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.text-container p {
+    margin-bottom: 1rem;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-image {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .text-container {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .text-container h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Adaptation pour petits écrans */
+@media (max-width: 480px) {
+    .text-container p {
+        font-size: 0.9rem;
+    }
+}

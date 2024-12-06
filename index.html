@@ -1,0 +1,55 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Balqisse Messaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bannière en haut -->
+    <header class="header">
+        <div class="logo">Portfolio</div>
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="profil.html">Profil</a>
+            <a href="competences.html">Compétences</a>
+            <a href="projets.html">Projets</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Section principale avec la vidéo en fond -->
+    <main class="main">
+        <div class="video-background">
+            <video autoplay loop muted>
+                <!-- Utiliser le chemin relatif ici -->
+                <source src="assets/videoinfo.mp4" type="video/mp4">
+                <source src="assets/videoinfo.webm" type="video/webm">
+                <source src="assets/videoinfo.ogv" type="video/ogg">
+            </video>
+        </div>
+        
+        <div class="main-content">
+            <h1>Balqisse Messaya</h1>
+            <h2 class="subtitle">
+                <span class="animated-text">Apprentissage en cyber sécurité</span>
+            </h2>
+        </div>
+    </main>
+
+    <!-- Scripts pour animation -->
+    <script>
+        const animatedText = document.querySelector('.animated-text');
+        let colors = ['#FF5733', '#33FF57', '#3357FF', '#F1C40F'];
+        let i = 0;
+        setInterval(() => {
+            animatedText.style.color = colors[i];
+            i = (i + 1) % colors.length;
+        }, 1000);
+    </script>
+
+
+</body>
+</html>
